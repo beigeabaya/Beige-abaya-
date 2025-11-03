@@ -1,1 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Beige Abaya</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      background-color: #f6f5f3;
+      color: #3a2f2f;
+      text-align: center;
+    }
+    header {
+      background-color: #d5c4b6;
+      padding: 20px;
+      font-size: 24px;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+    nav {
+      background-color: #ede7e0;
+      padding: 10px;
+    }
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #4b3b30;
+      font-weight: 600;
+    }
+    nav a:hover {
+      color: #b08b6f;
+    }
+    section {
+      padding: 40px 20px;
+    }
+    h2 {
+      color: #7a5c48;
+      margin-bottom: 20px;
+    }
+    .abaya-card {
+      display: inline-block;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+      margin: 15px;
+      padding: 15px;
+      width: 250px;
+    }
+    .abaya-card img {
+      width: 100%;
+      border-radius: 8px;
+    }
+    .abaya-info {
+      margin-top: 10px;
+    }
+    label {
+      font-weight: bold;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 6px;
+      margin: 6px 0;
+      border-radius: 5px;
+      border: 1px solid #cbbcb0;
+    }
+    footer {
+      background-color: #d5c4b6;
+      padding: 15px;
+      margin-top: 30px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
 
+  <header>Beige Abaya Collection</header>
+
+  <nav>
+    <a href="#">Best Seller</a>
+    <a href="#">Winter</a>
+    <a href="#">Summer</a>
+  </nav>
+
+  <section>
+    <h2>Our Elegant Abayas</h2>
+
+    <div class="abaya-card">
+      <img src="https://via.placeholder.com/250x300" alt="Abaya 0001">
+      <div class="abaya-info">
+        <p><strong>Abaya No:</strong> 0001</p>
+        <p><strong>Style:</strong> A-Line</p>
+
+        <label for="size">Select Size (Length 50–64):</label>
+        <select id="size">
+          <option>50</option>
+          <option>52</option>
+          <option>54</option>
+          <option>56</option>
+          <option>58</option>
+          <option>60</option>
+          <option>62</option>
+          <option>64</option>
+        </select>
+
+        <label for="color">Choose Color:</label>
+        <select id="color">
+          <option>Black</option>
+          <option>Beige</option>
+          <option>Brown</option>
+          <option>White</option>
+        </select>
+
+        <label for="notes">Notes / Custom Size:</label>
+        <textarea id="notes" placeholder="Enter your measurements or preferences..."></textarea>
+      </div>
+    </div>
+
+  </section>
+
+  <footer>Made with love by Beige Abaya UAE ✨</footer>
+
+</body>
+</html>
