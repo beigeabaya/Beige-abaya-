@@ -1,1 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 860">
+<style>
 
+    .bg{ fill:#EDE3D6; }
+
+    .card{ fill:#FFFFFF; stroke:#e9dfd6; stroke-width:2; }
+
+    .head{ fill:#f5eee7; }
+
+    .brand{ fill:#7B1E2B; font-weight:700; font-family: 'Cinzel', serif; letter-spacing:2px; }
+
+    .ar{ font-family: 'Tajawal', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif; }
+
+    .title{ fill:#7B1E2B; font-weight:700; font-size:44px; }
+
+    .th{ fill:#4b3b36; font-weight:700; font-size:26px; }
+
+    .td{ fill:#2b1a16; font-size:26px; }
+
+    .note{ fill:#756a66; font-size:20px; }
+</style>
+<!-- background -->
+<rect class="bg" x="0" y="0" width="1080" height="860"/>
+<!-- title -->
+<text x="540" y="90" text-anchor="middle" class="title ar" direction="rtl">دليل المقاسات</text>
+<!-- table -->
+<g transform="translate(70,130)">
+<rect class="card" x="0" y="0" width="940" height="560" rx="16"/>
+<!-- header row -->
+<rect class="head" x="0" y="0" width="940" height="70" rx="16"/>
+<!-- col lines (5 cols) -->
+<!-- col widths: 188 each -->
+<!-- headers RTL -->
+<text class="th ar" direction="rtl" x="890" y="45" text-anchor="end">المقاس</text>
+<text class="th ar" direction="rtl" x="702" y="45" text-anchor="end">الطول (cm)</text>
+<text class="th ar" direction="rtl" x="514" y="45" text-anchor="end">العرض (in)</text>
+<text class="th ar" direction="rtl" x="326" y="45" text-anchor="end">طول الكم (in)</text>
+<text class="th ar" direction="rtl" x="138" y="45" text-anchor="end">محيط الكم (in)</text>
+<!-- rows -->
+<!-- helper to print a row -->
+<!-- row1 -->
+<text class="td ar" direction="rtl" x="890" y="120" text-anchor="end">52</text>
+<text class="td ar" direction="rtl" x="702" y="120" text-anchor="end">52</text>
+<text class="td ar" direction="rtl" x="514" y="120" text-anchor="end">24</text>
+<text class="td ar" direction="rtl" x="326" y="120" text-anchor="end">26</text>
+<text class="td ar" direction="rtl" x="138" y="120" text-anchor="end">18</text>
+<!-- row2 -->
+<text class="td ar" direction="rtl" x="890" y="180" text-anchor="end">54</text>
+<text class="td ar" direction="rtl" x="702" y="180" text-anchor="end">54</text>
+<text class="td ar" direction="rtl" x="514" y="180" text-anchor="end">25</text>
+<text class="td ar" direction="rtl" x="326" y="180" text-anchor="end">27</text>
+<text class="td ar" direction="rtl" x="138" y="180" text-anchor="end">19</text>
+<!-- row3 -->
+<text class="td ar" direction="rtl" x="890" y="240" text-anchor="end">56</text>
+<text class="td ar" direction="rtl" x="702" y="240" text-anchor="end">56</text>
+<text class="td ar" direction="rtl" x="514" y="240" text-anchor="end">26</text>
+<text class="td ar" direction="rtl" x="326" y="240" text-anchor="end">28</text>
+<text class="td ar" direction="rtl" x="138" y="240" text-anchor="end">20</text>
+<!-- row4 -->
+<text class="td ar" direction="rtl" x="890" y="300" text-anchor="end">58</text>
+<text class="td ar" direction="rtl" x="702" y="300" text-anchor="end">58</text>
+<text class="td ar" direction="rtl" x="514" y="300" text-anchor="end">27</text>
+<text class="td ar" direction="rtl" x="326" y="300" text-anchor="end">29</text>
+<text class="td ar" direction="rtl" x="138" y="300" text-anchor="end">21</text>
+<!-- row5 -->
+<text class="td ar" direction="rtl" x="890" y="360" text-anchor="end">60</text>
+<text class="td ar" direction="rtl" x="702" y="360" text-anchor="end">60</text>
+<text class="td ar" direction="rtl" x="514" y="360" text-anchor="end">28</text>
+<text class="td ar" direction="rtl" x="326" y="360" text-anchor="end">30</text>
+<text class="td ar" direction="rtl" x="138" y="360" text-anchor="end">22</text>
+<!-- note -->
+<text class="note ar" direction="rtl" x="940" y="420" text-anchor="end">
+
+      جميع المقاسات تقريبية وقد تختلف اختلافًا طفيفًا. الطول بالـ cm، وبقية القياسات بالـ in.
+</text>
+</g>
+<!-- brand -->
+<text class="brand" x="540" y="820" text-anchor="middle">BEIGE — #MADEINUAE</text>
+</svg>
+SVG namespace
+ 
