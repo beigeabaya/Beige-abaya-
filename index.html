@@ -4,145 +4,190 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Beige Abaya</title>
-<!-- Cinzel font -->
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
    :root{
-     --bg:#EDE3D6;          /* بيج فاتح للخلفية */
-     --text:#2b1a16;        /* نص أسود/بني غامق */
-     --burgundy:#7B1E2B;    /* عنابي */
+     --bg: #EDE3D6;          /* بيج فاتح */
+     --text: #2b1a16;        /* نص أسود/بني عميق */
+     --burgundy:#7B1E2B;     /* عنّابي */
      --card:#ffffff;
-     --shadow:0 6px 18px rgba(0,0,0,.06);
-     --radius:12px;
+     --shadow: 0 6px 18px rgba(0,0,0,.06);
+     --radius: 12px;
    }
-   *{box-sizing:border-box}
+   *{box-sizing:border-box;}
    body{
      margin:0;
-     background:var(--bg);
-     color:var(--text);
-     font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-     line-height:1.6;
+     background: var(--bg);
+     color: var(--text);
+     font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+     line-height:1.55;
    }
    header{
      text-align:center;
-     padding:60px 20px 20px;
+     padding: 36px 16px 10px;
    }
    .logo{
-     font-family:"Cinzel", serif;
-     font-size:64px;
-     letter-spacing:8px;
-     color:var(--burgundy);
-     margin:0 0 8px;
+     font-family: "Cinzel", serif;
+     letter-spacing: .18em;
+     font-weight:700;
+     font-size: clamp(36px, 6vw, 68px);
+     color: var(--burgundy);
+     margin: 0 0 6px;
    }
    .tag{
      margin:0;
-     color:#7d5b55;
-     letter-spacing:2px;
+     color:#8e6f66;
+     font-weight:600;
+     letter-spacing:.2em;
    }
    nav{
      display:flex;
-     gap:24px;
      justify-content:center;
-     padding:14px 16px;
-     background:#f2e8ddaa;
-     position:sticky; top:0; backdrop-filter:saturate(140%) blur(8px);
-     z-index:9;
+     gap: 28px;
+     background:#f2e7dc;
+     padding: 10px 16px;
+     position:sticky;
+     top:0;
+     z-index:5;
+     backdrop-filter: blur(4px);
    }
    nav a{
-     color:var(--burgundy);
+     color: var(--burgundy);
      text-decoration:none;
-     font-weight:bold;
-     transition:color .25s ease;
+     font-weight:700;
+     transition:.2s;
    }
-   nav a:hover{ color:#4d0f17; }
+   nav a:hover{ opacity:.7; }
    section{
-     margin:40px auto;
-     max-width:980px;
-     background:var(--card);
-     border-radius:var(--radius);
-     box-shadow:var(--shadow);
-     padding:26px;
-     transition:transform .25s ease, box-shadow .25s ease;
-   }
-   section:hover{
-     transform:translateY(-3px);
-     box-shadow:0 8px 24px rgba(0,0,0,.12);
+     margin: 34px auto 60px;
+     max-width: 980px;
+     background: var(--card);
+     border-radius: var(--radius);
+     box-shadow: var(--shadow);
+     padding: 22px;
    }
    h2{
-     margin:0 0 20px;
-     font-size:28px;
-     color:var(--burgundy);
+     color: var(--burgundy);
+     font-size: 28px;
+     margin: 4px 6px 18px;
      text-align:center;
-     font-family:"Cinzel", serif;
-     letter-spacing:2px;
+     font-family: "Cinzel", serif;
+     letter-spacing:.08em;
    }
-   /* بطاقة المنتج */
-   .card{overflow:hidden}
+   /* Product Card */
+   .card{
+     border-radius: var(--radius);
+     overflow:hidden;
+     background:#fff;
+     box-shadow: 0 2px 10px rgba(0,0,0,.05);
+     margin-bottom: 26px;
+   }
    .card > img{
+     display:block;
      width:100%;
      height:auto;
-     border-radius:10px;
-     display:block;
+     aspect-ratio: 16/9;
+     object-fit:cover;
    }
    .meta{
-     margin-top:14px;
-     border:1px solid #eee;
-     border-radius:10px;
-     padding:14px;
+     padding: 14px 18px;
+     border-top: 1px solid #f1ece6;
    }
    .row{
-     display:flex; gap:16px; align-items:center; justify-content:space-between;
-     flex-wrap:wrap; margin-bottom:6px;
+     display:flex;
+     flex-wrap:wrap;
+     justify-content: space-between;
+     gap: 12px;
+     margin-bottom: 8px;
    }
-   .sku{ color:#6a524d; }
-   .spec{ color:#333; font-weight:600; }
-   .price{ color:var(--burgundy); font-size:18px; }
+   .sku{ font-weight:700; color:#3b2a26; }
+   .spec{ color:#4a4a4a; }
+   .price{ color:#111; }
+   /* Thumbs */
    .thumbs{
-     display:flex; gap:10px; margin-top:12px; flex-wrap:wrap;
+     display:flex;
+     gap:10px;
+     padding: 12px 18px 16px;
+     overflow-x: auto;
    }
    .thumbs img{
-     width:31.8%;
-     max-width:300px;
+     width:180px;
+     height:220px;
+     object-fit:cover;
      border-radius:10px;
      border:1px solid #eee;
-   }
-   .options{
-     margin-top:16px;
-     display:grid;
-     grid-template-columns:1fr 1fr;
-     gap:12px;
-   }
-   .options label{font-weight:600}
-   .options select,
-   .options input[type="text"],
-   .options input[type="number"]{
-     width:100%;
-     padding:10px 12px;
-     border:1px solid #ddd;
-     border-radius:10px;
-     outline:none;
+     flex: 0 0 auto;
      background:#fafafa;
    }
-   .options input[type="number"]{max-width:160px}
+   /* Options form */
+   .options{
+     display:grid;
+     grid-template-columns: 1fr 2fr;
+     gap:12px 14px;
+     padding: 14px 18px 22px;
+     border-top:1px solid #f1ece6;
+   }
+   .options label{
+     align-self:center;
+     font-weight:600;
+   }
+   .options select,
+   .options input{
+     width:100%;
+     padding:10px 12px;
+     border-radius:10px;
+     border:1px solid #ddd;
+     background:#fff;
+     font-family: inherit;
+   }
+   .options input[type="number"]{
+     max-width:120px;
+   }
+   /* Size Guide block (Arabic) */
+   .size-guide{
+     margin: 8px 18px 24px;
+     background:#f7f1eb;
+     padding:16px;
+     border-radius:10px;
+     direction: rtl;
+     font-family: "Tajawal", system-ui, sans-serif;
+   }
+   .size-guide h3{
+     margin:0 0 10px;
+     color: var(--burgundy);
+     font-weight:700;
+     font-size: 20px;
+   }
+   .size-guide .img{
+     background:#fff;
+     border-radius:10px;
+     border:1px solid #eee;
+     overflow:hidden;
+   }
+   .size-guide .img img{
+     display:block;
+     width:100%;
+     height:auto;
+   }
+   .brand{
+     text-align:center;
+     color: var(--burgundy);
+     font-weight:700;
+     margin-top:10px;
+     letter-spacing:.4px;
+     font-family: "Cinzel", serif;
+   }
    footer{
      text-align:center;
-     color:#7d5b55;
-     padding:40px 10px 60px;
+     padding: 26px 10px 40px;
+     color:#6a5a56;
    }
-   /* عنوان القسم العُلوي */
-   .title{
-     margin: 10px auto 24px;
-     max-width:980px;
-     text-align:center;
-     font-size:30px;
-     color:var(--burgundy);
-     font-family:"Cinzel", serif;
-     letter-spacing:2px;
-   }
-   @media (max-width:700px){
-     .logo{font-size:48px}
-     .options{grid-template-columns:1fr}
-     .thumbs img{width:100%}
+   @media (max-width: 640px){
+     .options{
+       grid-template-columns: 1fr;
+     }
+     .thumbs img{ width:150px; height:190px; }
    }
 </style>
 </head>
@@ -152,19 +197,15 @@
 <p class="tag">#MADEINUAE</p>
 </header>
 <nav>
-<a href="#best">Best Seller</a>
-<a href="#winter">Winter</a>
-<a href="#summer">Summer</a>
+<a href="#">Best Seller</a>
+<a href="#">Winter</a>
+<a href="#">Summer</a>
 </nav>
-<div class="title">Our Elegant Abayas</div>
-<!-- ============ Winter Section ============ -->
-<section id="winter">
-<h2>Winter</h2>
-<!-- START: Product Winter001 -->
+<section>
+<h2>Our Elegant Abayas</h2>
+<!-- Product: Winter001 -->
 <div class="card">
-<!-- الصورة الأساسية -->
-<img src="winter/Winter001.jpg" alt="Abaya Winter001">
-<!-- بيانات المنتج -->
+<img src="Winter001.jpg" alt="Abaya Winter001">
 <div class="meta">
 <div class="row">
 <div class="sku">Product No: <strong>#001</strong></div>
@@ -173,33 +214,34 @@
 <div class="row spec">مخمل (Korean) — نص كلوش</div>
 <div class="row price"><strong>AED</strong></div>
 </div>
-<!-- صور إضافية (تفاصيل + جدول المقاسات) -->
+<!-- extra images -->
 <div class="thumbs">
-<img src="winter/Winter001_detail1.jpg" alt="Winter001 detail 1">
-<img src="winter/Winter001_detail2.jpg" alt="Winter001 detail 2">
-<img src="assets/beige_size_chart_ar_en.png" alt="Size chart | جدول المقاسات">
+<img src="Winter001_detail1.jpg" alt="Winter001 detail 1">
+<img src="Winter001_detail2.jpg" alt="Winter001 detail 2">
 </div>
-<!-- خيارات العميل -->
+<!-- Size Guide (Arabic SVG) -->
+<div class="size-guide" dir="rtl">
+<h3>دليل المقاسات</h3>
+<div class="img">
+<img src="beige_size_chart_ar.svg" alt="دليل المقاسات - بيج">
+</div>
+<div class="brand">BEIGE — #MADEINUAE</div>
+</div>
+<!-- options -->
 <form class="options" onsubmit="return false;">
-<div>
 <label>الطول</label>
 <select name="length" required>
 <option value="" selected disabled>اختر</option>
 <option>52</option><option>54</option><option>56</option>
 <option>58</option><option>60</option><option>62</option>
 </select>
-</div>
-<div>
 <label>ملاحظات</label>
 <input type="text" name="notes" placeholder="اكتب ملاحظاتك (اختياري)">
-</div>
-<div>
 <label>الكمية</label>
 <input type="number" name="qty" min="1" value="1">
-</div>
 </form>
 </div>
-<!-- END: Product Winter001 -->
+<!-- /Product: Winter001 -->
 </section>
 <footer>© 2025 BEIGE</footer>
 </body>
