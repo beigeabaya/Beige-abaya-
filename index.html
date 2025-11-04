@@ -2,136 +2,111 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Beige Abaya</title>
-<!-- Cinzel font -->
+<!-- Cinzel Font -->
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
 <style>
-   :root{
-     --bg:#EDE3D6;          /* بيج فاتح للخلفية */
-     --text:#2b1a16;        /* نص أسود/بني غامق */
-     --burgundy:#7B1E2B;    /* عنّابي */
-     --card:#ffffff;
-     --shadow:0 6px 18px rgba(0,0,0,.06);
+   :root {
+     --bg: #EDE3D6;       /* بيج فاتح */
+     --text: #2b1a16;     /* نص أسود/بني غامق */
+     --burgundy: #7B1E2B; /* عنابي */
+     --card: #ffffff;
+     --shadow: 0 6px 18px rgba(0,0,0,0.06);
    }
-   *{box-sizing:border-box}
-   body{
-     margin:0;
-     background:var(--bg);
-     color:var(--text);
-     font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-     line-height:1.5;
+   * {
+     box-sizing: border-box;
    }
-   header{
-     padding:56px 20px 28px;
-     text-align:center;
+   body {
+     margin: 0;
+     background-color: var(--bg);
+     color: var(--text);
+     font-family: 'Cinzel', serif;
+     line-height: 1.6;
+     text-align: center;
    }
-   .logo{
-     font-family:"Cinzel", serif;
-     font-weight:700;
-     font-size:clamp(48px, 10vw, 110px);
-     letter-spacing:.12em;
-     color:var(--burgundy);
-     margin:0 0 12px;
+   header {
+     padding: 30px 0;
    }
-   .tag{
-     margin:0;
-     font-weight:600;
-     letter-spacing:.18em;
-     color:var(--burgundy);
+   .logo {
+     font-size: 48px;
+     color: var(--burgundy);
+     margin: 0;
+     letter-spacing: 4px;
    }
-   nav{
-     display:flex;
-     gap:20px;
-     justify-content:center;
-     padding:14px 16px;
-     background:rgba(255,255,255,.5);
-     backdrop-filter:saturate(140%) blur(4px);
-     border-top:1px solid rgba(0,0,0,.05);
-     border-bottom:1px solid rgba(0,0,0,.05);
+   .tag {
+     font-size: 14px;
+     color: var(--text);
+     letter-spacing: 2px;
+     margin-top: 5px;
    }
-   nav a{
-     text-decoration:none;
-     color:var(--text);
-     font-weight:600;
+   nav {
+     background: #f6eee5;
+     padding: 10px;
    }
-   section{
-     max-width:980px;
-     margin:36px auto 80px;
-     padding:0 16px;
+   nav a {
+     color: var(--burgundy);
+     text-decoration: none;
+     font-weight: bold;
+     margin: 0 15px;
+     transition: color 0.3s ease;
    }
-   h2{
-     font-family:"Cinzel", serif;
-     font-size:clamp(24px, 4.2vw, 44px);
-     color:var(--burgundy);
-     text-align:center;
-     margin:0 0 20px;
+   nav a:hover {
+     color: #4d0f17;
    }
-   .card{
-     background:var(--card);
-     border-radius:16px;
-     box-shadow:var(--shadow);
-     padding:16px;
-     overflow:hidden;
+   section {
+     margin: 40px auto;
+     max-width: 900px;
+     background: var(--card);
+     border-radius: 10px;
+     box-shadow: var(--shadow);
+     padding: 20px;
    }
-   .image{
-     width:100%;
-     aspect-ratio: 4/5;
-     object-fit:cover;
-     border-radius:12px;
-     display:block;
-     background:#f3f3f3;
+   h2 {
+     color: var(--burgundy);
+     font-size: 28px;
+     margin-bottom: 20px;
    }
-   .meta{
-     padding:14px 6px 4px;
-     font-size:15px;
+   .card img {
+     width: 100%;
+     border-radius: 10px;
    }
-   .row{
-     display:flex;
-     justify-content:space-between;
-     align-items:center;
-     gap:8px;
-     flex-wrap:wrap;
-     margin:6px 0;
-   }
-   .sku{
-     font-weight:700;
-     color:var(--text);
-   }
-   .spec{
-     color:#000;
-     font-weight:600;
-   }
-   footer{
-     text-align:center;
-     color:#7a6f68;
-     padding:36px 16px 60px;
-     font-size:14px;
+   footer {
+     margin: 40px 0 20px;
+     color: var(--text);
+     font-size: 12px;
    }
 </style>
 </head>
 <body>
 <header>
 <h1 class="logo">BEIGE</h1>
-<p class="tag">#MADEINUAE</p>
+<p class="tag">#MADEIN UAE</p>
 </header>
 <nav>
-<a href="#">Best Seller</a>
-<a href="#">Winter</a>
-<a href="#">Summer</a>
+<a href="#bestseller">Best Seller</a>
+<a href="#winter">Winter</a>
+<a href="#summer">Summer</a>
 </nav>
-<section>
-<h2>Our Elegant Abayas</h2>
-<!-- أول منتج: Winter001 -->
+<!-- Best Seller Section -->
+<section id="bestseller">
+<h2>Best Seller</h2>
+<div class="card">
+<img src="bestseller/Best001.jpg" alt="Best Seller Abaya">
+</div>
+</section>
+<!-- Winter Section -->
+<section id="winter">
+<h2>Winter Collection</h2>
 <div class="card">
 <img src="Winter001.jpg" alt="Abaya Winter001">
-<div class="meta">
-<div class="row">
-<div class="sku">Product No: #001</div>
-<div>Style: Winter</div>
 </div>
-<div class="row spec">مخمل (Korean) — نص كلوش</div>
-</div>
+</section>
+<!-- Summer Section -->
+<section id="summer">
+<h2>Summer Collection</h2>
+<div class="card">
+<img src="summer/Summer001.jpg" alt="Summer Abaya">
 </div>
 </section>
 <footer>© 2025 BEIGE</footer>
