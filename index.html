@@ -1,156 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Beige Abaya</title>
-  <link href="https://fonts.googleapis.com/css2?family=Gloock&display=swap" rel="stylesheet">
-  <style>
-    .logo {
-  font-family: 'Gloock', serif;
-  font-weight: 400;
-  font-size: clamp(48px, 12vw, 120px);
-  letter-spacing: 0.15rem;
-  color: #5b2a22;
-  text-align: center;
-}
-
-    body {body {
-  background-color: #e8e3d9;
-}
-<header class="site-header">
-  <h1 class="logo">BEIGE</h1>
-  <p style="text-align:center; font-family:'Poppins', sans-serif; color:#5b2a22; letter-spacing:0.25rem;">#MADEINUAE</p>
-</header>
-      font-family: 'Poppins', sans-serif;
-      margin: 0;
-      background-color: #f6f5f3;
-      color: #3a2f2f;
-      text-align: center;
-    }
-    header {header {
-  background-color: #d5c4b6;
-  padding: 20px;
-  font-size: 24px;
-  font-weight: bold;
-  letter-spacing: 1px;
-}
-      background-color: #d5c4b6;
-      padding: 
-    }
-    nav {
-      background-color: #ede7e0;
-      padding: 10px;
-    }
-    nav a {
-      margin: 0 15px;
-      text-decoration: none;
-      color: #4b3b30;
-      font-weight: 600;
-    }
-    nav a:hover {
-      color: #b08b6f;
-    }
-    section {
-      padding: 40px 20px;
-    }
-    h2 {
-      color: #7a5c48;
-      margin-bottom: 20px;
-    }
-    .abaya-card {
-      display: inline-block;
-      background-color: white;
-      border-radius: 10px;
-      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
-      margin: 15px;
-      padding: 15px;
-      width: 250px;
-    }
-    .abaya-card img {
-      width: 100%;
-      border-radius: 8px;
-    }
-    .abaya-info {
-      margin-top: 10px;
-    }
-    label {
-      font-weight: bold;
-    }
-    input, select, textarea {
-      width: 100%;
-      padding: 6px;
-      margin: 6px 0;
-      border-radius: 5px;
-      border: 1px solid #cbbcb0;
-    }
-    footer {
-      background-color: #d5c4b6;
-      padding: 15px;
-      margin-top: 30px;
-      font-size: 14px;
-    }
-  </style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Beige Abaya</title>
+<!-- Cinzel font -->
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
+<style>
+   :root{
+     --bg:#EDE3D6;          /* بيج فاتح للخلفية */
+     --text:#2b1a16;        /* نص أسود/بني غامق */
+     --burgundy:#7B1E2B;    /* عنّابي */
+     --card:#ffffff;
+     --shadow:0 6px 18px rgba(0,0,0,.06);
+   }
+   *{box-sizing:border-box}
+   body{
+     margin:0;
+     background:var(--bg);
+     color:var(--text);
+     font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+     line-height:1.5;
+   }
+   header{
+     padding:56px 20px 28px;
+     text-align:center;
+   }
+   .logo{
+     font-family:"Cinzel", serif;
+     font-weight:700;
+     font-size:clamp(48px, 10vw, 110px);
+     letter-spacing:.12em;
+     color:var(--burgundy);
+     margin:0 0 12px;
+   }
+   .tag{
+     margin:0;
+     font-weight:600;
+     letter-spacing:.18em;
+     color:var(--burgundy);
+   }
+   nav{
+     display:flex;
+     gap:20px;
+     justify-content:center;
+     padding:14px 16px;
+     background:rgba(255,255,255,.5);
+     backdrop-filter:saturate(140%) blur(4px);
+     border-top:1px solid rgba(0,0,0,.05);
+     border-bottom:1px solid rgba(0,0,0,.05);
+   }
+   nav a{
+     text-decoration:none;
+     color:var(--text);
+     font-weight:600;
+   }
+   section{
+     max-width:980px;
+     margin:36px auto 80px;
+     padding:0 16px;
+   }
+   h2{
+     font-family:"Cinzel", serif;
+     font-size:clamp(24px, 4.2vw, 44px);
+     color:var(--burgundy);
+     text-align:center;
+     margin:0 0 20px;
+   }
+   .card{
+     background:var(--card);
+     border-radius:16px;
+     box-shadow:var(--shadow);
+     padding:16px;
+     overflow:hidden;
+   }
+   .image{
+     width:100%;
+     aspect-ratio: 4/5;
+     object-fit:cover;
+     border-radius:12px;
+     display:block;
+     background:#f3f3f3;
+   }
+   .meta{
+     padding:14px 6px 4px;
+     font-size:15px;
+   }
+   .row{
+     display:flex;
+     justify-content:space-between;
+     align-items:center;
+     gap:8px;
+     flex-wrap:wrap;
+     margin:6px 0;
+   }
+   .sku{
+     font-weight:700;
+     color:var(--text);
+   }
+   .spec{
+     color:#000;
+     font-weight:600;
+   }
+   footer{
+     text-align:center;
+     color:#7a6f68;
+     padding:36px 16px 60px;
+     font-size:14px;
+   }
+</style>
 </head>
 <body>
-
-  <header style="background-color:#e8e3d9; text-align:center; padding: 40px 0;">
-  <h1 style="font-family: 'Poppins', sans-serif; font-size: 58px; color:#5c2a1e; letter-spacing:3px; margin:0;">
-    <span style="font-weight:300;">BE</span><span style="font-weight:500;">IGE</span>
-  </h1>
-  <h2 style="font-family: 'Cairo', sans-serif; font-size: 42px; color:#5c2a1e; margin-top:-10px;">بيج</h2>
-  <p style="font-size:14px; color:#7b5b4a; letter-spacing:2px; margin-top:8px;">#MADEINUAEE</p>
+<header>
+<h1 class="logo">BEIGE</h1>
+<p class="tag">#MADEINUAE</p>
 </header>
-<header style="background-color:#e8e3d9; text-align:center; padding: 40px 0;">
-  <h1 style="font-family: 'Poppins', sans-serif; font-size: 58px; color:#5c2a1e; letter-spacing:3px; margin:0;">
-    <span style="font-weight:300;">BE</span><span style="font-weight:500;">IGE</span>
-  </h1>
-  <h2 style="font-family: 'Cairo', sans-serif; font-size: 42px; color:#5c2a1e; margin-top:-10px;">بيج</h2>
-  <p style="font-size:14px; color:#7b5b4a; letter-spacing:2px; margin-top:8px;">#MADEINUAEE</p>
-</header>
-  <nav>
-    <a href="#">Best Seller</a>
-    <a href="#">Winter</a>
-    <a href="#">Summer</a>
-  </nav>
-
-  <section>
-    <h2>Our Elegant Abayas</h2>
-
-    <div class="abaya-card">
-      <img src="https://via.placeholder.com/250x300" alt="Abaya 0001">
-      <div class="abaya-info">
-        <p><strong>Abaya No:</strong> 0001</p>
-        <p><strong>Style:</strong> A-Line</p>
-
-        <label for="size">Select Size (Length 50–64):</label>
-        <select id="size">
-          <option>50</option>
-          <option>52</option>
-          <option>54</option>
-          <option>56</option>
-          <option>58</option>
-          <option>60</option>
-          <option>62</option>
-          <option>64</option>
-        </select>
-
-        <label for="color">Choose Color:</label>
-        <select id="color">
-          <option>Black</option>
-          <option>Beige</option>
-          <option>Brown</option>
-          <option>White</option>
-        </select>
-
-        <label for="notes">Notes / Custom Size:</label>
-        <textarea id="notes" placeholder="Enter your measurements or preferences..."></textarea>
-      </div>
-    </div>
-
-  </section>
-
-  <footer>Made with love by Beige Abaya UAE ✨</footer>
-
+<nav>
+<a href="#">Best Seller</a>
+<a href="#">Winter</a>
+<a href="#">Summer</a>
+</nav>
+<section>
+<h2>Our Elegant Abayas</h2>
+<!-- أول منتج: Winter001 -->
+<div class="card">
+<img class="image" src="winter/Winter001.jpg" alt="Abaya Winter001" />
+<div class="meta">
+<div class="row">
+<div class="sku">Product No: #001</div>
+<div>Style: Winter</div>
+</div>
+<div class="row spec">مخمل (Korean) — نص كلوش</div>
+</div>
+</div>
+</section>
+<footer>© 2025 BEIGE</footer>
 </body>
 </html>
+ 
