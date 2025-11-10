@@ -1,194 +1,90 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Beige Abaya</title>
-<!-- Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
-   :root{
-     --bg: #EDE3D6;          /* بيج فاتح */
-     --text: #2b1a16;        /* نص أسود/بني عميق */
-     --burgundy:#7B1E2B;     /* عنّابي */
-     --card:#ffffff;
-     --shadow: 0 6px 18px rgba(0,0,0,.06);
-     --radius: 12px;
-   }
-   *{box-sizing:border-box;}
-   body{
-     margin:0;
-     background: var(--bg);
-     color: var(--text);
-     font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
-     line-height:1.55;
-   }
-   header{
-     text-align:center;
-     padding: 36px 16px 10px;
-   }
-   .logo{
-     font-family: "Cinzel", serif;
-     letter-spacing: .18em;
-     font-weight:700;
-     font-size: clamp(36px, 6vw, 68px);
-     color: var(--burgundy);
-     margin: 0 0 6px;
-   }
-   .tag{
-     margin:0;
-     color:#8e6f66;
-     font-weight:600;
-     letter-spacing:.2em;
-   }
-   nav{
-     display:flex;
-     justify-content:center;
-     gap: 28px;
-     background:#f2e7dc;
-     padding: 10px 16px;
-     position:sticky;
-     top:0;
-     z-index:5;
-     backdrop-filter: blur(4px);
-   }
-   nav a{
-     color: var(--burgundy);
-     text-decoration:none;
-     font-weight:700;
-     transition:.2s;
-   }
-   nav a:hover{ opacity:.7; }
-   section{
-     margin: 34px auto 60px;
-     max-width: 980px;
-     background: var(--card);
-     border-radius: var(--radius);
-     box-shadow: var(--shadow);
-     padding: 22px;
-   }
-   h2{
-     color: var(--burgundy);
-     font-size: 28px;
-     margin: 4px 6px 18px;
-     text-align:center;
-     font-family: "Cinzel", serif;
-     letter-spacing:.08em;
-   }
-   /* Product Card */
+ :root{
+   --bg:#EDE3D6;          /* بيج فاتح */
+   --text:#2b1a16;        /* نص غامق */
+   --burgundy:#7B1E2B;    /* عنابي */
+   --card:#ffffff;
+   --shadow:0 6px 18px rgba(0,0,0,.06);
+ }
+ *{box-sizing:border-box}
+ body{
+   margin:0;
+   background:var(--bg);
+   color:var(--text);
+   font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, "Noto Kufi Arabic", "Noto Sans Arabic", "Tajawal", sans-serif;
+   line-height:1.6;
+ }
+ header{
+   text-align:center;
+   padding:26px 16px 6px;
+ }
+ .logo{margin:0; letter-spacing:.15em}
+ .tag{margin:6px 0 0; opacity:.8}
+ nav{
+   display:flex; gap:18px; justify-content:center; padding:10px 0 20px;
+   font-weight:bold;
+ }
+ nav a{ color:var(--burgundy); text-decoration:none }
+ nav a:hover{ color:#4d0f17 }
+ section.container{
+   margin: 26px auto 40px;
+   max-width: 980px;
+   background: var(--card);
+   border-radius: 10px;
+   box-shadow: var(--shadow);
+   padding: 20px;
+ }
+ h2.title{
+   color:var(--burgundy); text-align:center; margin:0 0 16px;
+ }
+ /* بطاقة المنتج */
+ .card{ display:grid; gap:16px }
+ @media(min-width:800px){
    .card{
-     border-radius: var(--radius);
-     overflow:hidden;
-     background:#fff;
-     box-shadow: 0 2px 10px rgba(0,0,0,.05);
-     margin-bottom: 26px;
+     grid-template-columns: 1.2fr 1fr;
+     align-items:start;
    }
-   .card > img{
-     display:block;
-     width:100%;
-     height:auto;
-     aspect-ratio: 16/9;
-     object-fit:cover;
-   }
-   .meta{
-     padding: 14px 18px;
-     border-top: 1px solid #f1ece6;
-   }
-   .row{
-     display:flex;
-     flex-wrap:wrap;
-     justify-content: space-between;
-     gap: 12px;
-     margin-bottom: 8px;
-   }
-   .sku{ font-weight:700; color:#3b2a26; }
-   .spec{ color:#4a4a4a; }
-   .price{ color:#111; }
-   /* Thumbs */
-   .thumbs{
-     display:flex;
-     gap:10px;
-     padding: 12px 18px 16px;
-     overflow-x: auto;
-   }
-   .thumbs img{
-     width:180px;
-     height:220px;
-     object-fit:cover;
-     border-radius:10px;
-     border:1px solid #eee;
-     flex: 0 0 auto;
-     background:#fafafa;
-   }
-   /* Options form */
-   .options{
-     display:grid;
-     grid-template-columns: 1fr 2fr;
-     gap:12px 14px;
-     padding: 14px 18px 22px;
-     border-top:1px solid #f1ece6;
-   }
-   .options label{
-     align-self:center;
-     font-weight:600;
-   }
-   .options select,
-   .options input{
-     width:100%;
-     padding:10px 12px;
-     border-radius:10px;
-     border:1px solid #ddd;
-     background:#fff;
-     font-family: inherit;
-   }
-   .options input[type="number"]{
-     max-width:120px;
-   }
-   /* Size Guide block (Arabic) */
-   .size-guide{
-     margin: 8px 18px 24px;
-     background:#f7f1eb;
-     padding:16px;
-     border-radius:10px;
-     direction: rtl;
-     font-family: "Tajawal", system-ui, sans-serif;
-   }
-   .size-guide h3{
-     margin:0 0 10px;
-     color: var(--burgundy);
-     font-weight:700;
-     font-size: 20px;
-   }
-   .size-guide .img{
-     background:#fff;
-     border-radius:10px;
-     border:1px solid #eee;
-     overflow:hidden;
-   }
-   .size-guide .img img{
-     display:block;
-     width:100%;
-     height:auto;
-   }
-   .brand{
-     text-align:center;
-     color: var(--burgundy);
-     font-weight:700;
-     margin-top:10px;
-     letter-spacing:.4px;
-     font-family: "Cinzel", serif;
-   }
-   footer{
-     text-align:center;
-     padding: 26px 10px 40px;
-     color:#6a5a56;
-   }
-   @media (max-width: 640px){
-     .options{
-       grid-template-columns: 1fr;
-     }
-     .thumbs img{ width:150px; height:190px; }
-   }
+ }
+ .mainImg{
+   width:100%; height:auto; display:block;
+   border-radius:10px; box-shadow:var(--shadow);
+ }
+ .thumbs{
+   display:grid; grid-template-columns:repeat(3,1fr); gap:10px; margin-top:10px
+ }
+ .thumbs img{
+   width:100%; height:160px; object-fit:cover; border-radius:10px; background:#f6f1eb
+ }
+ .meta .row{ display:flex; gap:14px; align-items:center; margin:6px 0 }
+ .sku{ font-weight:700 }
+ .spec{ opacity:.9 }
+ .price{ color:var(--burgundy); font-size:18px; font-weight:700 }
+ /* الخيارات */
+ form.options{ display:grid; gap:10px; margin-top:8px }
+ form.options label{ font-weight:600 }
+ form.options select, form.options input[type="text"], form.options input[type="number"]{
+   width:100%; padding:10px 12px; border:1px solid #ddd; border-radius:8px; background:#fff
+ }
+ /* زر واتساب */
+ .cta-wrap{ text-align:center; margin-top:18px }
+ .cta{
+   background:var(--burgundy); color:#fff; border-radius:10px;
+   padding:12px 26px; text-decoration:none; font-weight:700; display:inline-block;
+   box-shadow:var(--shadow)
+ }
+ /* الفوتر */
+ footer{ text-align:center; opacity:.8; padding:16px 0 6px }
+ /* جدول القياسات أسفل الصفحة */
+ .sizes{
+   margin-top:18px; background:#fff; border-radius:10px; padding:10px; box-shadow:var(--shadow)
+ }
+ .sizes img{ width:100%; height:auto; display:block }
 </style>
 </head>
 <body>
@@ -198,52 +94,60 @@
 </header>
 <nav>
 <a href="#">Best Seller</a>
-<a href="#">Winter</a>
-<a href="#">Summer</a>
+<a href="#winter">Winter</a>
+<a href="#summer">Summer</a>
 </nav>
-<section>
-<h2>Our Elegant Abayas</h2>
-<!-- Product: Winter001 -->
+<section class="container" id="winter">
+<h2 class="title">عباية Winter001</h2>
 <div class="card">
-<img src="Winter001.jpg" alt="Abaya Winter001">
-<div class="meta">
-<div class="row">
-<div class="sku">Product No: <strong>#001</strong></div>
-<div>Style: Winter</div>
-</div>
-<div class="row spec">مخمل (Korean) — نص كلوش</div>
-<div class="row price"><strong>AED</strong></div>
-</div>
-<!-- extra images -->
+<!-- الصورة الرئيسية -->
+<div>
+<img class="mainImg" src="winter/Winter001.jpg" alt="عباية Winter001">
+<!-- صور تفاصيل + جدول المقاسات -->
 <div class="thumbs">
-<img src="Winter001_detail1.jpg" alt="Winter001 detail 1">
-<img src="Winter001_detail2.jpg" alt="Winter001 detail 2">
+<img src="winter/Winter001_detail1.jpg" alt="Winter001 تفصيل 1">
+<img src="winter/Winter001_detail2.jpg" alt="Winter001 تفصيل 2">
+<!-- يعرض SVG، ولو غير متوفر يحوّل تلقائياً إلى PNG -->
+<img src="beige_size_chart_ar.svg" onerror="this.onerror=null;this.src='beige_size_chart_ar.png';" alt="جدول المقاسات">
 </div>
-<!-- Size Guide (Arabic SVG) -->
-<div class="size-guide" dir="rtl">
-<h3>دليل المقاسات</h3>
-<div class="img">
-<img src="beige_size_chart_ar.svg" alt="دليل المقاسات - بيج">
 </div>
-<div class="brand">BEIGE — #MADEINUAE</div>
+<!-- بيانات المنتج والخيارات -->
+<div>
+<div class="meta">
+<div class="row"><div class="sku">رقم المنتج: <strong>#001</strong></div><div>القسم: Winter</div></div>
+<div class="row spec">الخامة: مخمل (Korean) — قصّة: نص كلوش</div>
+<div class="row price">السعر: <strong>AED</strong></div>
 </div>
-<!-- options -->
 <form class="options" onsubmit="return false;">
-<label>الطول</label>
-<select name="length" required>
+<label for="length">الطول</label>
+<select id="length" name="length" required>
 <option value="" selected disabled>اختر</option>
 <option>52</option><option>54</option><option>56</option>
 <option>58</option><option>60</option><option>62</option>
 </select>
-<label>ملاحظات</label>
-<input type="text" name="notes" placeholder="اكتب ملاحظاتك (اختياري)">
-<label>الكمية</label>
-<input type="number" name="qty" min="1" value="1">
+<label for="notes">ملاحظات</label>
+<input id="notes" type="text" name="notes" placeholder="اكتبي ملاحظاتك (اختياري)">
+<label for="qty">الكمية</label>
+<input id="qty" type="number" name="qty" min="1" value="1">
 </form>
+<div class="cta-wrap">
+<a class="cta"
+            href="https://wa.me/971544608064?text=مرحباً، أرغب في طلب العباية Winter001 من Beige Abaya."
+            target="_blank" rel="noopener">
+           اطلبي الآن عبر واتساب
+</a>
 </div>
-<!-- /Product: Winter001 -->
+<div class="sizes">
+<!-- نفس ملف المقاسات كصورة كبيرة تحت البيانات -->
+<img src="beige_size_chart_ar.svg" onerror="this.onerror=null;this.src='beige_size_chart_ar.png';" alt="جدول المقاسات">
+</div>
+</div>
+</div>
+</section>
+<section class="container" id="summer">
+<h2 class="title">Summer</h2>
+<p style="text-align:center; margin:8px 0 2px; opacity:.6">(سيُضاف لاحقًا)</p>
 </section>
 <footer>© 2025 BEIGE</footer>
 </body>
 </html>
- 
