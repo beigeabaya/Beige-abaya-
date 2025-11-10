@@ -1,153 +1,145 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ar" dir="rtl">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Beige Abaya</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>BEIGE — عبايات</title>
 <style>
- :root{
-   --bg:#EDE3D6;          /* بيج فاتح */
-   --text:#2b1a16;        /* نص غامق */
-   --burgundy:#7B1E2B;    /* عنابي */
-   --card:#ffffff;
-   --shadow:0 6px 18px rgba(0,0,0,.06);
- }
- *{box-sizing:border-box}
- body{
-   margin:0;
-   background:var(--bg);
-   color:var(--text);
-   font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, "Noto Kufi Arabic", "Noto Sans Arabic", "Tajawal", sans-serif;
-   line-height:1.6;
- }
- header{
-   text-align:center;
-   padding:26px 16px 6px;
- }
- .logo{margin:0; letter-spacing:.15em}
- .tag{margin:6px 0 0; opacity:.8}
- nav{
-   display:flex; gap:18px; justify-content:center; padding:10px 0 20px;
-   font-weight:bold;
- }
- nav a{ color:var(--burgundy); text-decoration:none }
- nav a:hover{ color:#4d0f17 }
- section.container{
-   margin: 26px auto 40px;
-   max-width: 980px;
-   background: var(--card);
-   border-radius: 10px;
-   box-shadow: var(--shadow);
-   padding: 20px;
- }
- h2.title{
-   color:var(--burgundy); text-align:center; margin:0 0 16px;
- }
- /* بطاقة المنتج */
- .card{ display:grid; gap:16px }
- @media(min-width:800px){
-   .card{
-     grid-template-columns: 1.2fr 1fr;
-     align-items:start;
+   :root{
+     --bg:#efe3d6;      /* بيج فاتح */
+     --ink:#2b1d1c;     /* خمري داكن */
+     --card:#fff;
+     --muted:#7b1e2b;   /* خمري العلامة */
+     --soft:#e9d7c7;    /* حدود فاتحة */
+     --shadow:0 10px 28px rgba(0,0,0,.08);
+     --radius:12px;
    }
- }
- .mainImg{
-   width:100%; height:auto; display:block;
-   border-radius:10px; box-shadow:var(--shadow);
- }
- .thumbs{
-   display:grid; grid-template-columns:repeat(3,1fr); gap:10px; margin-top:10px
- }
- .thumbs img{
-   width:100%; height:160px; object-fit:cover; border-radius:10px; background:#f6f1eb
- }
- .meta .row{ display:flex; gap:14px; align-items:center; margin:6px 0 }
- .sku{ font-weight:700 }
- .spec{ opacity:.9 }
- .price{ color:var(--burgundy); font-size:18px; font-weight:700 }
- /* الخيارات */
- form.options{ display:grid; gap:10px; margin-top:8px }
- form.options label{ font-weight:600 }
- form.options select, form.options input[type="text"], form.options input[type="number"]{
-   width:100%; padding:10px 12px; border:1px solid #ddd; border-radius:8px; background:#fff
- }
- /* زر واتساب */
- .cta-wrap{ text-align:center; margin-top:18px }
- .cta{
-   background:var(--burgundy); color:#fff; border-radius:10px;
-   padding:12px 26px; text-decoration:none; font-weight:700; display:inline-block;
-   box-shadow:var(--shadow)
- }
- /* الفوتر */
- footer{ text-align:center; opacity:.8; padding:16px 0 6px }
- /* جدول القياسات أسفل الصفحة */
- .sizes{
-   margin-top:18px; background:#fff; border-radius:10px; padding:10px; box-shadow:var(--shadow)
- }
- .sizes img{ width:100%; height:auto; display:block }
+   html,body{margin:0;background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,"Segoe UI",Tahoma,Arial;}
+   header{max-width:1100px;margin:20px auto 10px;padding:0 16px}
+   nav{display:flex;gap:18px;justify-content:flex-end}
+   nav a{color:var(--ink);text-decoration:none;font-weight:700}
+   nav a.active{color:var(--muted)}
+   h1{margin:10px 0 6px;font-size:20px;letter-spacing:.4px}
+   section{max-width:1100px;margin:18px auto;padding:16px;border-radius:var(--radius);background:var(--card);box-shadow:var(--shadow)}
+   .grid{display:grid;grid-template-columns:1fr;gap:16px}
+   @media (min-width:900px){ .grid{grid-template-columns:420px 1fr} }
+   .hero{border-radius:var(--radius);overflow:hidden;background:#f7f2ee}
+   .hero img{width:100%;height:420px;object-fit:cover;display:block}
+   .meta .row{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:6px 0}
+   .sku{background:var(--soft);padding:4px 10px;border-radius:999px;font-weight:700}
+   .price{font-size:18px;font-weight:800}
+   .thumbs{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:10px 0}
+   .thumbs img{width:100%;height:180px;object-fit:cover;border-radius:10px;background:#f2ebe5}
+   .band{background:#e7d4c5;height:14px;border-radius:999px;margin:12px 0;position:relative}
+   .brand{font-weight:900;color:var(--muted);text-align:center;margin:6px 0 2px}
+   .options label{font-weight:700;margin:10px 0 6px;display:block}
+   select,input[type="text"],input[type="number"]{
+     width:100%;padding:12px;border-radius:10px;border:1px solid #e1cdbd;background:#fff;outline:none
+   }
+   .cta-wrap{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-top:14px}
+   .btn{display:inline-block;padding:12px 18px;border-radius:10px;text-decoration:none;font-weight:800}
+   .btn-primary{background:var(--muted);color:#fff}
+   .btn-ghost{background:#fff;color:var(--muted);border:1px solid #e1cdbd}
+   details.size{
+     border:1px dashed #d9c3b3;border-radius:10px;background:#f8f1ea;
+   }
+   details.size summary{
+     cursor:pointer;padding:10px 14px;font-weight:800;color:var(--muted);list-style:none;
+   }
+   details.size[open] summary{border-bottom:1px dashed #e1c9b8}
+   .size-body{padding:10px 14px}
+   .size-body img,.size-body object{width:100%;max-height:520px;object-fit:contain;background:#fff;border-radius:10px}
+   footer{max-width:1100px;margin:20px auto 40px;text-align:center;color:#7d645b}
 </style>
 </head>
 <body>
 <header>
-<h1 class="logo">BEIGE</h1>
-<p class="tag">#MADEINUAE</p>
-</header>
+<h1>BEIGE</h1>
 <nav>
-<a href="#">Best Seller</a>
-<a href="#winter">Winter</a>
+<a href="#best">Best Seller</a>
+<a href="#winter" class="active">Winter</a>
 <a href="#summer">Summer</a>
 </nav>
-<section class="container" id="winter">
-<h2 class="title">عباية Winter001</h2>
-<div class="card">
-<!-- الصورة الرئيسية -->
-<div>
-<img class="mainImg" src="winter/Winter001.jpg" alt="عباية Winter001">
-<!-- صور تفاصيل + جدول المقاسات -->
-<div class="thumbs">
-<img src="winter/Winter001_detail1.jpg" alt="Winter001 تفصيل 1">
-<img src="winter/Winter001_detail2.jpg" alt="Winter001 تفصيل 2">
-<!-- يعرض SVG، ولو غير متوفر يحوّل تلقائياً إلى PNG -->
-<img src="beige_size_chart_ar.svg" onerror="this.onerror=null;this.src='beige_size_chart_ar.png';" alt="جدول المقاسات">
+</header>
+<!-- قسم الشتاء -->
+<section id="winter">
+<div class="grid">
+<!-- صورة رئيسية -->
+<div class="hero">
+<img src="winter/Winter001.jpg" alt="عباية Winter001">
 </div>
-</div>
-<!-- بيانات المنتج والخيارات -->
+<!-- معلومات + خيارات -->
 <div>
 <div class="meta">
-<div class="row"><div class="sku">رقم المنتج: <strong>#001</strong></div><div>القسم: Winter</div></div>
-<div class="row spec">الخامة: مخمل (Korean) — قصّة: نص كلوش</div>
-<div class="row price">السعر: <strong>AED</strong></div>
+<div class="row"><span class="sku">Product No: #001</span><span>Style: Winter</span></div>
+<div class="row">مخمل (Korean) — نص كلوش</div>
+<div class="row price">AED</div>
 </div>
+<!-- صور إضافية -->
+<div class="thumbs">
+<img src="winter/Winter001_detail1.jpg" alt="Winter001 — تفصيل 1">
+<img src="winter/Winter001_detail2.jpg" alt="Winter001 — تفصيل 2">
+</div>
+<div class="band"></div>
+<div class="brand">BEIGE — #MADEINUAE</div>
+<!-- دليل المقاسات -->
+<details class="size">
+<summary>دليل المقاسات</summary>
+<div class="size-body">
+<!-- نحاول عرض SVG، ولو ما اشتغل نحول لPNG أو نفتح كرابط -->
+<object data="beige_size_chart_ar.svg" type="image/svg+xml">
+<img src="beige_size_chart_ar.png" alt="دليل المقاسات">
+<p style="text-align:center;margin-top:8px">
+             تعذر عرض الصورة، <a href="beige_size_chart_ar.svg" target="_blank">افتحي دليل المقاسات كملف</a>.
+</p>
+</object>
+</div>
+</details>
+<!-- الخيارات -->
 <form class="options" onsubmit="return false;">
-<label for="length">الطول</label>
-<select id="length" name="length" required>
+<label for="len">الطول</label>
+<select id="len" name="length" required>
 <option value="" selected disabled>اختر</option>
 <option>52</option><option>54</option><option>56</option>
-<option>58</option><option>60</option><option>62</option>
+<option>58</option><option>60</option>
 </select>
 <label for="notes">ملاحظات</label>
 <input id="notes" type="text" name="notes" placeholder="اكتبي ملاحظاتك (اختياري)">
 <label for="qty">الكمية</label>
 <input id="qty" type="number" name="qty" min="1" value="1">
-</form>
 <div class="cta-wrap">
-<a class="cta"
-            href="https://wa.me/971544608064?text=مرحباً، أرغب في طلب العباية Winter001 من Beige Abaya."
-            target="_blank" rel="noopener">
-           اطلبي الآن عبر واتساب
-</a>
+<a class="btn btn-primary" id="wbtn" href="#">اطلبي الآن عبر واتساب</a>
+<a class="btn btn-ghost" href="beige_size_chart_ar.svg" target="_blank">فتح المقاسات كملف</a>
 </div>
-<div class="sizes">
-<!-- نفس ملف المقاسات كصورة كبيرة تحت البيانات -->
-<img src="beige_size_chart_ar.svg" onerror="this.onerror=null;this.src='beige_size_chart_ar.png';" alt="جدول المقاسات">
-</div>
+</form>
 </div>
 </div>
 </section>
-<section class="container" id="summer">
-<h2 class="title">Summer</h2>
-<p style="text-align:center; margin:8px 0 2px; opacity:.6">(سيُضاف لاحقًا)</p>
-</section>
+<!-- أقسام مستقبلية -->
+<section id="best"><h2 style="margin:0">Best Seller</h2><p>قريبًا…</p></section>
+<section id="summer"><h2 style="margin:0">Summer</h2><p>قريبًا…</p></section>
 <footer>© 2025 BEIGE</footer>
+<script>
+ // توليد رسالة واتساب حسب الخيارات
+ (function(){
+   var btn = document.getElementById('wbtn');
+   function build(){
+     var len   = document.getElementById('len').value || '';
+     var notes = document.getElementById('notes').value || '';
+     var qty   = document.getElementById('qty').value || '1';
+     var msg = "مرحبًا، أرغب في طلب Winter001 من Beige Abaya."
+             + "%0Aالطول: " + (len? len : "—")
+             + "%0Aالكمية: " + qty
+             + "%0Aملاحظات: " + (notes? notes : "—");
+     btn.href = "https://wa.me/971544608064?text=" + msg;
+   }
+   ['len','notes','qty'].forEach(id=>{
+     var el=document.getElementById(id);
+     el.addEventListener('change',build);
+     el.addEventListener('input',build);
+   });
+   build();
+ })();
+</script>
 </body>
 </html>
