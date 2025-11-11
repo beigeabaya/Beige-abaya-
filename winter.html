@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>BEIGE — Winter</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="header">
+<div class="wrap">
+<a class="logo" href="index.html"><span>BEIGE</span></a>
+<nav>
+<a href="bestseller.html">Best Seller</a>
+<a class="active" href="winter.html">Winter</a>
+<a href="summer.html">Summer</a>
+</nav>
+</div>
+</header>
+<h2 class="page-title">Winter</h2>
+<section class="grid">
+<!-- Winter001 -->
+<article class="card"
+     data-name="Winter001"
+     data-sku="#001"
+     data-gallery='[
+       "winter/Winter001.jpg",
+       "winter/Winter001_detail1.jpg",
+       "winter/Winter001_detail2.jpg"
+     ]'>
+<div class="cover" data-gallery-index="0">
+<span class="zoom-hint">تكبير</span>
+<img src="winter/Winter001.jpg" alt="Winter001">
+</div>
+<div class="thumbs">
+<img src="winter/Winter001_detail1.jpg" alt="تفصيل 1" data-gallery-index="1">
+<img src="winter/Winter001_detail2.jpg" alt="تفصيل 2" data-gallery-index="2">
+<img src="beige_size_chart_ar.svg" alt="دليل المقاسات" loading="lazy">
+</div>
+<div class="meta">
+<div class="row">
+<div class="sku">Product No: #001</div>
+<div class="price-chip">AED</div>
+</div>
+<div class="row fabric">مخمل (Korean) — نص كلوش · Style: Winter</div>
+</div>
+<form class="options" onsubmit="return false;">
+<label>الطول</label>
+<select name="length" required>
+<option value="" selected disabled>اختر</option>
+<option>50</option><option>52</option><option>54</option>
+<option>56</option><option>58</option><option>60</option><option>62</option>
+</select>
+<label>ملاحظات</label>
+<input type="text" name="notes" placeholder="اكتبي ملاحظاتك (اختياري)">
+<label>الكمية</label>
+<input type="number" name="qty" min="1" value="1">
+</form>
+<div class="actions">
+<button class="btn btn-brand" data-wa>اطلبي الآن واتساب</button>
+<a class="btn btn-ghost" href="beige_size_chart_ar.svg" target="_blank" rel="noopener">فتح المقاسات</a>
+</div>
+</article>
+</section>
+<div class="footer">BEIGE 2025 ©</div>
+<!-- مودال -->
+<div id="galleryModal" class="modal" aria-hidden="true">
+<div class="frame">
+<button class="ctrl close">إغلاق ✕</button>
+<button class="ctrl prev">◀</button>
+<button class="ctrl next">▶</button>
+<div class="slides"></div>
+</div>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
