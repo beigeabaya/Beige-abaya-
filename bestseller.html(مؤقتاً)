@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>BEIGE — Best Seller</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="header">
+<div class="wrap">
+<a class="logo" href="index.html"><span>BEIGE</span></a>
+<nav>
+<a class="active" href="bestseller.html">Best Seller</a>
+<a href="winter.html">Winter</a>
+<a href="summer.html">Summer</a>
+</nav>
+</div>
+</header>
+<h2 class="page-title">Best Seller</h2>
+<section class="grid">
+<div class="card"><div class="meta" style="padding:30px; text-align:center">قريبًا…</div></div>
+</section>
+<div class="footer">BEIGE 2025 ©</div>
+</body>
+</html>
