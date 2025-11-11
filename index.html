@@ -1,289 +1,89 @@
 <!doctype html>
 <html lang="ar" dir="rtl">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>BEIGE — عبايات</title>
-<style>
- :root{
-   --bg:#f1e5da;        /* بيج فاتح للخلفية */
-   --card:#f6efe9;      /* بيج أفتح للكروت */
-   --ink:#3a2b22;       /* بني داكن للنص */
-   --accent:#7B1E2B;    /* خمري */
-   --muted:#a58f81;
-   --radius:14px;
-   --shadow:0 8px 22px rgba(0,0,0,.08);
- }
- *{box-sizing:border-box}
- html,body{margin:0;background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,"Segoe UI",Tahoma,"Noto Kufi Arabic","Dubai","Cairo",Arial,sans-serif;line-height:1.7}
- a{color:var(--accent);text-decoration:none}
- .container{max-width:1100px;margin:24px auto;padding:0 16px}
- /* Header */
- header{display:flex;align-items:center;justify-content:space-between;margin:8px 0 20px}
- .brand{display:flex;align-items:center;gap:10px}
- .brand a.logo{
-   display:inline-block;background:#2d5ea8;color:#fff;font-weight:800;
-   letter-spacing:.5px;padding:8px 14px;border-radius:8px
- }
- nav a{font-weight:700;margin-inline-start:18px;color:var(--ink);opacity:.7}
- nav a.active, nav a:hover{opacity:1;color:var(--accent)}
- /* Product card layout */
- .product{
-   display:grid;
-   grid-template-columns: 1.1fr .9fr;
-   gap:16px;
- }
- .gallery, .details{
-   background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);padding:14px
- }
- .thumbs{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-bottom:10px}
- .thumb{
-   position:relative;overflow:hidden;background:#fff;border-radius:12px;
-   height:190px;display:flex;align-items:center;justify-content:center
- }
- .thumb img{width:100%;height:100%;object-fit:cover;transition:transform .25s ease}
- .thumb:hover img{transform:scale(1.03)}         /* الحركة عند المرور */
- .main-shot{height:520px;border-radius:12px;overflow:hidden;background:#fff}
- .main-shot img{width:100%;height:100%;object-fit:cover}
- .meta{display:grid;grid-template-columns:1fr auto;gap:8px;align-items:center;margin:8px 0 14px}
- .sku{background:#fff;padding:6px 10px;border-radius:8px;border:1px solid #eee;font-weight:700}
- .style{font-size:14px;color:#6a5245}
- .price{justify-self:end;font-weight:900;color:#000}
- /* Size guide pill & modal */
- .pill{
-   display:inline-flex;gap:8px;align-items:center;
-   background:#e8d8cb;color:#5b463d;border-radius:999px;padding:6px 12px;
-   border:1px solid #e0cfc2;font-size:14px
- }
- .sizes-note{font-size:12px;color:#7a675b;margin-top:8px}
- .sizes-table{width:100%;border-collapse:collapse;background:#fff;border-radius:10px;overflow:hidden}
- .sizes-table th,.sizes-table td{padding:10px 12px;border-bottom:1px solid #eee;text-align:center}
- .sizes-table thead th{background:#f4ece6;color:#6a5245}
- .btn{
-   background:var(--accent);color:#fff;border:none;border-radius:10px;
-   padding:12px 18px;font-weight:800;cursor:pointer
- }
- .btn.secondary{background:#fff;color:var(--accent);border:2px solid var(--accent)}
- .btn:disabled{opacity:.6;cursor:not-allowed}
- /* Form */
- form .row{display:grid;grid-template-columns:160px 1fr;gap:10px;align-items:center;margin:8px 0}
- select,input,textarea{
-   width:100%;padding:12px 14px;border-radius:10px;border:1px solid #e0d2c6;background:#fff;font:inherit
- }
- textarea{min-height:90px;resize:vertical}
- /* Lightbox */
- .lightbox{position:fixed;inset:0;background:rgba(0,0,0,.72);display:none;align-items:center;justify-content:center;z-index:20}
- .lightbox.open{display:flex}
- .lightbox .frame{position:relative;max-width:min(92vw,900px);width:100%;aspect-ratio:3/4;background:#000;border-radius:12px;overflow:hidden}
- .lightbox img{width:100%;height:100%;object-fit:contain;background:#000}
- .lb-close,.lb-prev,.lb-next{
-   position:absolute;top:12px;background:rgba(255,255,255,.9);border:none;border-radius:8px;padding:8px 10px;font-weight:800;cursor:pointer
- }
- .lb-close{inset-inline-end:12px}
- .lb-prev{inset-inline-start:12px;top:50%;transform:translateY(-50%)}
- .lb-next{inset-inline-end:12px;top:50%;transform:translateY(-50%)}
- /* Modal (size guide full) */
- .modal{position:fixed;inset:0;background:rgba(0,0,0,.55);display:none;align-items:center;justify-content:center;z-index:30}
- .modal.open{display:flex}
- .modal .card{background:#fff;border-radius:14px;max-width:760px;width:92vw;padding:18px;box-shadow:var(--shadow)}
- .modal header{justify-content:space-between}
- .modal h3{margin:0}
- .modal .close{background:#f1e5da;border:none;border-radius:8px;padding:8px 10px;cursor:pointer}
- /* Footer */
- footer{color:#8b7567;text-align:center;margin:28px 0 40px}
- /* Responsive */
- @media (max-width:900px){
-   .product{grid-template-columns:1fr}
-   .main-shot{height:420px}
-   form .row{grid-template-columns:1fr}
- }
-</style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>BEIGE — الصفحة الرئيسية</title>
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<div class="container">
-<!-- Header -->
-<header>
-<div class="brand">
-<a class="logo" href="#home" title="العودة للرئيسية">BEIGE</a>
-</div>
+<header class="header">
+<div class="wrap">
+<a class="logo" href="index.html" aria-label="العودة للصفحة الرئيسية"><span>BEIGE</span></a>
 <nav>
-<a href="#winter" class="active">Winter</a>
-<!-- سنفعلهم لاحقًا -->
-<!-- <a href="#best">Best Seller</a>
-<a href="#summer">Summer</a> -->
+<a href="bestseller.html">Best Seller</a>
+<a href="winter.html">Winter</a>
+<a href="summer.html">Summer</a>
 </nav>
+</div>
 </header>
-<!-- ======= HOME (اختياري) ======= -->
-<section id="home" style="display:none"></section>
-<!-- ======= WINTER PRODUCT ======= -->
-<section id="winter" class="product">
-<!-- Gallery -->
-<div class="gallery">
+<h2 class="page-title">كل العبايات</h2>
+<section class="grid">
+<!-- بطاقة منتج تجريبية (Winter001) ستتكرر لاحقاً -->
+<article class="card"
+
+      data-name="Winter001"
+
+      data-sku="#001"
+
+      data-gallery='[
+
+        "winter/Winter001.jpg",
+
+        "winter/Winter001_detail1.jpg",
+
+        "winter/Winter001_detail2.jpg"
+
+      ]'>
+<div class="cover" data-gallery-index="0">
+<span class="zoom-hint">تكبير</span>
+<img src="winter/Winter001.jpg" alt="Winter001">
+</div>
 <div class="thumbs">
-<button class="thumb" data-idx="0" aria-label="عرض الصورة 1">
-<img src="winter/Winter001_detail1.jpg" alt="Winter001 detail 1">
-</button>
-<button class="thumb" data-idx="1" aria-label="عرض الصورة 2">
-<img src="winter/Winter001_detail2.jpg" alt="Winter001 detail 2">
-</button>
+<img src="winter/Winter001_detail1.jpg" alt="تفصيل 1" data-gallery-index="1">
+<img src="winter/Winter001_detail2.jpg" alt="تفصيل 2" data-gallery-index="2">
+<img src="beige_size_chart_ar.svg" alt="دليل المقاسات" loading="lazy">
 </div>
-<div class="main-shot">
-<img id="mainImg" src="winter/Winter001.jpg" alt="Winter001 — الصورة الرئيسية">
-</div>
-</div>
-<!-- Details & form -->
-<div class="details">
 <div class="meta">
+<div class="row">
 <div class="sku">Product No: #001</div>
-<div class="style">Style: Winter — <span>مخمل (Korean) — نص كلوش</span></div>
-<div class="price">AED</div>
+<div class="price-chip">AED</div>
 </div>
-<!-- Size guide pill -->
-<div class="pill" style="margin:6px 0 12px">
-<span>دليل المقاسات</span>
-<button class="btn secondary" id="openSizes" type="button" style="padding:6px 10px">فتح المقاسات كامل</button>
+<div class="row fabric">
+
+          مخمل (Korean) — نص كلوش · Style: Winter
 </div>
-<!-- Inline mini size table -->
-<table class="sizes-table" style="margin:6px 0 12px">
-<thead>
-<tr>
-<th>المقاس</th>
-<th>الطول (cm)</th>
-<th>العرض (in)</th>
-<th>طول الكم (in)</th>
-<th>محیط/عرض الكم (in)</th>
-</tr>
-</thead>
-<tbody>
-<tr><td>52</td><td>52</td><td>24</td><td>26</td><td>18</td></tr>
-<tr><td>54</td><td>54</td><td>25</td><td>27</td><td>19</td></tr>
-<tr><td>56</td><td>56</td><td>26</td><td>28</td><td>20</td></tr>
-<tr><td>58</td><td>58</td><td>27</td><td>29</td><td>21</td></tr>
-<tr><td>60</td><td>60</td><td>28</td><td>30</td><td>22</td></tr>
-</tbody>
-</table>
-<div class="sizes-note">جميع القياسات تقريبية وقد تختلف اختلافًا بسيطًا (الطول بالسنتيمتر cm، والبقية بالإنش in).</div>
-<!-- Order form -->
-<form id="order" onsubmit="return false" style="margin-top:16px">
-<div class="row">
-<label for="len">الطول</label>
-<select id="len" required>
+</div>
+<form class="options" onsubmit="return false;">
+<label>الطول</label>
+<select name="length" required>
 <option value="" selected disabled>اختر</option>
-<option>52</option><option>54</option><option>56</option>
-<option>58</option><option>60</option>
+<option>50</option><option>52</option><option>54</option>
+<option>56</option><option>58</option><option>60</option><option>62</option>
 </select>
-</div>
-<div class="row">
-<label for="notes">ملاحظات</label>
-<textarea id="notes" placeholder="اكتبي ملاحظاتك (اختياري) — مثل تعديل الطول أو تفاصيل إضافية"></textarea>
-</div>
-<div class="row">
-<label for="qty">الكمية</label>
-<input id="qty" type="number" min="1" value="1" />
-</div>
-<div class="row" style="grid-template-columns:1fr 1fr">
-<button class="btn" id="whatsappBtn" type="button">اطلبي الآن عبر واتساب</button>
-<button class="btn secondary" id="sizesBtn" type="button">فتح المقاسات كامل</button>
-</div>
+<label>ملاحظات</label>
+<input type="text" name="notes" placeholder="اكتبي ملاحظاتك (اختياري)">
+<label>الكمية</label>
+<input type="number" name="qty" min="1" value="1">
 </form>
+<div class="actions">
+<button class="btn btn-brand" data-wa>اطلبي الآن واتساب</button>
+<a class="btn btn-ghost" href="beige_size_chart_ar.svg" target="_blank" rel="noopener">فتح المقاسات</a>
 </div>
+</article>
+<!-- /بطاقة -->
 </section>
-<footer>BEIGE © 2025 — #MADEINUAE</footer>
-</div>
-<!-- ===== Lightbox (صور) ===== -->
-<div class="lightbox" id="lightbox" aria-hidden="true">
+<div class="footer">BEIGE — #MADEINUAE</div>
+<!-- مودال الجاليري -->
+<div id="galleryModal" class="modal" aria-hidden="true">
 <div class="frame">
-<button class="lb-close" aria-label="إغلاق" id="lbClose">✕</button>
-<button class="lb-prev" aria-label="السابق" id="lbPrev">‹</button>
-<img id="lbImg" alt="">
-<button class="lb-next" aria-label="التالي" id="lbNext">›</button>
+<button class="ctrl close">إغلاق ✕</button>
+<button class="ctrl prev">◀</button>
+<button class="ctrl next">▶</button>
+<div class="slides"></div>
 </div>
 </div>
-<!-- ===== Sizes Modal ===== -->
-<div class="modal" id="sizesModal" aria-hidden="true">
-<div class="card">
-<header>
-<h3>دليل المقاسات — BEIGE</h3>
-<button class="close" id="sizesClose">إغلاق</button>
-</header>
-<div style="margin-top:10px">
-<table class="sizes-table">
-<thead>
-<tr>
-<th>المقاس</th>
-<th>الطول (cm)</th>
-<th>العرض (in)</th>
-<th>طول الكم (in)</th>
-<th>محیط/عرض الكم (in)</th>
-</tr>
-</thead>
-<tbody>
-<tr><td>52</td><td>52</td><td>24</td><td>26</td><td>18</td></tr>
-<tr><td>54</td><td>54</td><td>25</td><td>27</td><td>19</td></tr>
-<tr><td>56</td><td>56</td><td>26</td><td>28</td><td>20</td></tr>
-<tr><td>58</td><td>58</td><td>27</td><td>29</td><td>21</td></tr>
-<tr><td>60</td><td>60</td><td>28</td><td>30</td><td>22</td></tr>
-</tbody>
-</table>
-<p class="sizes-note">جميع القياسات تقريبية وقد تختلف اختلافًا بسيطًا.</p>
-</div>
-</div>
-</div>
-<script>
- // --- Lightbox gallery ---
- const galleryImages = [
-   'winter/Winter001.jpg',
-   'winter/Winter001_detail1.jpg',
-   'winter/Winter001_detail2.jpg'
- ];
- const thumbs = document.querySelectorAll('.thumb');
- const lb = document.getElementById('lightbox');
- const lbImg = document.getElementById('lbImg');
- const lbClose = document.getElementById('lbClose');
- const lbPrev = document.getElementById('lbPrev');
- const lbNext = document.getElementById('lbNext');
- const mainImg = document.getElementById('mainImg');
- let cur = 0;
- function openLB(i){ cur=i; lbImg.src = galleryImages[cur]; lb.classList.add('open'); }
- function closeLB(){ lb.classList.remove('open'); lbImg.src=''; }
- function prev(){ cur = (cur + galleryImages.length - 1) % galleryImages.length; lbImg.src = galleryImages[cur]; }
- function next(){ cur = (cur + 1) % galleryImages.length; lbImg.src = galleryImages[cur]; }
- thumbs.forEach((t,idx)=> t.addEventListener('click',()=> openLB(idx+1))); // التفاصيل أولاً
- mainImg.addEventListener('click',()=> openLB(0));
- lbClose.addEventListener('click', closeLB);
- lb.addEventListener('click', e=> { if(e.target===lb) closeLB(); });
- lbPrev.addEventListener('click', prev);
- lbNext.addEventListener('click', next);
- window.addEventListener('keydown', e=>{
-   if(!lb.classList.contains('open')) return;
-   if(e.key==='Escape') closeLB();
-   if(e.key==='ArrowRight') next();
-   if(e.key==='ArrowLeft') prev();
- });
- // --- Sizes modal ---
- const sizesModal = document.getElementById('sizesModal');
- const sizesClose = document.getElementById('sizesClose');
- const openSizes = document.getElementById('openSizes');
- const sizesBtn = document.getElementById('sizesBtn');
- function openSizesModal(){ sizesModal.classList.add('open'); }
- function closeSizesModal(){ sizesModal.classList.remove('open'); }
- openSizes.addEventListener('click', openSizesModal);
- sizesBtn.addEventListener('click', openSizesModal);
- sizesClose.addEventListener('click', closeSizesModal);
- sizesModal.addEventListener('click', e=>{ if(e.target===sizesModal) closeSizesModal(); });
- // --- WhatsApp order ---
- document.getElementById('whatsappBtn').addEventListener('click', ()=>{
-   const len = document.getElementById('len').value || '';
-   const notes = document.getElementById('notes').value || '';
-   const qty = document.getElementById('qty').value || '1';
-   const msg = `مرحبًا، أرغب في طلب Winter001 من Beige Abaya.%0Aالمقاس/الطول: ${len}%0Aالكمية: ${qty}%0Aملاحظات: ${notes}`;
-   window.open(`https://wa.me/971544608064?text=${msg}`,'_blank');
- });
- // اجعل شعار BEIGE يأخذك للرئيسية (تم إظهاره كمرجع)
- document.querySelector('.logo').addEventListener('click', (e)=>{
-   // مجرد سكرول لأعلى
-   window.scrollTo({top:0, behavior:'smooth'});
- });
-</script>
+<script src="app.js"></script>
 </body>
 </html>
+ 
