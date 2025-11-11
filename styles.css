@@ -1,0 +1,121 @@
+:root{
+ --bg:#efe3d9;        /* بيج فاتح */
+ --card:#fff;
+ --ink:#2b2b2b;
+ --muted:#7b6a64;
+ --brand:#7B1E2B;     /* Burgundy */
+ --brand-ink:#fff;
+ --chip:#e8d6cc;
+ --shadow:0 10px 30px rgba(0,0,0,.08);
+ --radius:14px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+ margin:0;
+ font-family:system-ui, -apple-system, "Segoe UI", Roboto, "Noto Kufi Arabic", "Dubai", "Tajawal", Arial, sans-serif;
+ direction:rtl;
+ background:var(--bg);
+ color:var(--ink);
+}
+/* Header / Nav */
+.header{
+ position:sticky; top:0; z-index:1000;
+ background:linear-gradient(180deg,#f6ece6 0,#efe3d9 100%);
+ border-bottom:1px solid #e9d7cf;
+}
+.wrap{max-width:1100px; margin:auto; padding:14px 18px; display:flex; align-items:center; justify-content:space-between; gap:14px}
+.logo{
+ display:inline-flex; align-items:center; gap:10px; text-decoration:none;
+ font-weight:900; letter-spacing:.5px; color:var(--brand);
+ background:#e7ecf7; padding:6px 10px; border-radius:8px;
+}
+.logo span{font-size:18px}
+nav a{
+ text-decoration:none; color:var(--muted); font-weight:700; margin:0 10px;
+}
+nav a.active, nav a:hover{color:var(--brand)}
+/* Page title */
+.page-title{max-width:1100px; margin:24px auto 6px; padding:0 18px; color:var(--muted)}
+/* Grid of cards */
+.grid{
+ max-width:1100px; margin:12px auto 60px; padding:0 18px;
+ display:grid; gap:18px;
+ grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+}
+/* Product card */
+.card{
+ background:var(--card); border-radius:var(--radius); box-shadow:var(--shadow);
+ overflow:hidden; display:flex; flex-direction:column;
+ transition:transform .2s ease, box-shadow .2s ease;
+}
+.card:hover{ transform:translateY(-3px); box-shadow:0 12px 34px rgba(0,0,0,.12); }
+.cover{
+ aspect-ratio:4/3; position:relative; overflow:hidden; background:#f7f1ed;
+}
+.cover img{
+ width:100%; height:100%; object-fit:cover; display:block;
+ transition:transform .35s ease;
+}
+.card:hover .cover img{ transform:scale(1.03); }
+.zoom-hint{
+ position:absolute; left:12px; top:12px;
+ background:rgba(0,0,0,.55); color:#fff; font-size:12px;
+ padding:5px 8px; border-radius:20px;
+}
+.meta{ padding:14px 14px 10px; display:flex; flex-direction:column; gap:8px }
+.row{ display:flex; align-items:center; justify-content:space-between; gap:8px; }
+.sku{font-weight:800; color:var(--brand)}
+.fabric{ color:var(--muted); font-size:14px }
+.price-chip{
+ background:var(--chip); padding:6px 10px; border-radius:20px; font-weight:800; color:var(--brand);
+}
+/* Thumbs below cover */
+.thumbs{ display:flex; gap:10px; padding:0 14px 12px; }
+.thumbs img{
+ width:33.33%; aspect-ratio:4/3; object-fit:cover; border-radius:10px; cursor:pointer;
+ background:#f4ece7;
+}
+/* Options form */
+.options{ padding:12px 14px 16px; display:grid; gap:10px; }
+label{font-size:14px; color:var(--muted)}
+select, input[type="text"], input[type="number"]{
+ width:100%; padding:10px 12px; border:1px solid #e6d8d1; border-radius:10px; background:#faf6f3;
+ font-family:inherit; font-size:15px;
+}
+.actions{
+ display:flex; gap:10px; padding:0 14px 16px; align-items:center;
+}
+.btn{
+ appearance:none; border:0; border-radius:10px; padding:12px 16px; cursor:pointer; font-weight:800;
+}
+.btn-brand{ background:var(--brand); color:var(--brand-ink); }
+.btn-ghost{ background:transparent; border:1px solid #e0cfc7; color:var(--muted); }
+.footer{ max-width:1100px; margin:30px auto 50px; padding:0 18px; text-align:center; color:var(--muted) }
+/* Lightbox / Gallery modal */
+.modal{
+ position:fixed; inset:0; background:rgba(0,0,0,.7);
+ display:none; align-items:center; justify-content:center; z-index:2000;
+}
+.modal.open{ display:flex; }
+.modal .frame{
+ width:min(92vw,1000px); background:#000; border-radius:12px; overflow:hidden; position:relative;
+}
+.slide{
+ width:100%; height:min(80vh,700px); display:none;
+}
+.slide.active{ display:block; }
+.slide img{ width:100%; height:100%; object-fit:contain; background:#000; }
+.ctrl{
+ position:absolute; top:50%; transform:translateY(-50%);
+ background:rgba(255,255,255,.15); border:0; color:#fff; width:46px; height:46px; border-radius:50%;
+ cursor:pointer; font-size:22px;
+}
+.ctrl:hover{background:rgba(255,255,255,.25)}
+.ctrl.prev{ right:auto; left:12px; }
+.ctrl.next{ right:12px; }
+.ctrl.close{ top:10px; right:10px; transform:none; width:auto; height:auto; padding:8px 12px; border-radius:8px; font-size:14px; }
+@media (max-width:520px){
+ .zoom-hint{display:none}
+ .actions{ flex-direction:column; align-items:stretch }
+}
